@@ -21,8 +21,8 @@ public class Test_ {
         int [] decrypted = sdes.decrypt(key,ciphertext);
         System.out.println(Arrays.toString(decrypted));
 
-        String plaintext_ = "yuanshen";
-        String key_ = "1111111111";
+        String plaintext_ = "11111111";
+        String key_ = "1010101010";
         String ciphertext_ = sdes.encrypt(key_,plaintext_);
         System.out.println(ciphertext_);
         String decrypted_ = sdes.decrypt(key_,ciphertext_);
