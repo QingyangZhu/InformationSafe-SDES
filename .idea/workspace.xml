@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a515c88-afdf-4da0-8048-b44ccdcbd563" name="更改" comment="补充了输入为字符串的情形&#10;完成了页面的制作">
+    <list default="true" id="5a515c88-afdf-4da0-8048-b44ccdcbd563" name="更改" comment="GUI页面&#10;修复了按照要求输入却按照字符型操作的bug">
+      <change afterPath="$PROJECT_DIR$/src/src/BruteForceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/Test_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Test_.java" afterDir="false" />
     </list>
@@ -12,6 +13,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,7 +52,20 @@
       <recent name="D:\aa\InformationSafe-SDES\src\page" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.Des">
+  <component name="RunManager" selected="应用程序.BruteForceTest">
+    <configuration name="BruteForceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.BruteForceTest" />
+      <module name="InformationSafe-SDES" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Des" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="page.Des" />
       <module name="InformationSafe-SDES" />
@@ -80,8 +101,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.Des" />
+        <item itemvalue="应用程序.BruteForceTest" />
         <item itemvalue="应用程序.Test_" />
+        <item itemvalue="应用程序.Des" />
         <item itemvalue="应用程序.Main" />
       </list>
     </recent_temporary>
@@ -98,7 +120,7 @@
       <workItem from="1695898445033" duration="806000" />
       <workItem from="1696430382022" duration="2152000" />
       <workItem from="1696432554869" duration="2689000" />
-      <workItem from="1696502023498" duration="5558000" />
+      <workItem from="1696502023498" duration="14561000" />
     </task>
     <task id="LOCAL-00001" summary="补充了输入为字符串的情形&#10;完成了页面的制作">
       <created>1696506703906</created>
@@ -107,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696506703906</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="GUI页面&#10;修复了按照要求输入却按照字符型操作的bug">
+      <created>1696509020693</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696509020693</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +145,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="完成sdes算法部分,修正了shift方法，并与其他组进行实验测试，结果匹配" />
     <MESSAGE value="补充了输入为字符串的情形&#10;完成了页面的制作" />
-    <option name="LAST_COMMIT_MESSAGE" value="补充了输入为字符串的情形&#10;完成了页面的制作" />
+    <MESSAGE value="GUI页面&#10;修复了按照要求输入却按照字符型操作的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI页面&#10;修复了按照要求输入却按照字符型操作的bug" />
   </component>
 </project>
