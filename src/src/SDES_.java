@@ -1,4 +1,9 @@
+package src;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+
+
 
 public class SDES_ {
     //分组及密文长度
@@ -105,6 +110,46 @@ public class SDES_ {
         res = P_BOX_substitute(res,IP_1);
         return res;
     }
+    //如果输入密文的加密类型为字符串，字符串长度为n，则考虑先将字符串中的每一个字符转化为8位的ASCII码，然后对每一个8位的ASCII码进行加密，
+    // 最后得到一个n位的数组，每个数组表示一个字符的加密结果，最后再将数组的每一个8位ASCII码转化为对应的字符就得到了加密结果
+    // 可以直接将encrypt函数的参数设置为字符串，然后直接调用即可
+    public String encrypt(String key,String plaintext){
+        //先将字符串转化为对应的8位ASCII码的数组，数组的长度为字符串的长度,需要将ASCII码转换为8位的二进制数再存储
+        ArrayList<int []> plaintext_list =new ArrayList<>();
+        for(int i = 0;i < plaintext.length();i++){
+            int plaintext_a = (int)plaintext.charAt(i);
+            String binary = Integer.toBinaryString(plaintext_a);
+            StringBuilder sb = new StringBuilder(binary);
+            while (sb.length() < 8) {
+                sb.insert(0, '0');
+            }
+            int [] plaintext_i =  new int[8];
+            for (int j = 0; j < 8; j++) {
+                plaintext_i[j] = sb.charAt(j) - '0';
+            }
+            plaintext_list.add(plaintext_i);
+        }
+        ArrayList<int []> ciphertext_list =new ArrayList<>();
+        char[] chars = key.toCharArray();
+        int length = chars.length;
+        int[] keys = new int[length];
+        for (int i = 0; i < length; i++) {
+            keys[i] = chars[i] - '0';
+        }
+        for (int[] ints : plaintext_list) {
+            ciphertext_list.add(encrypt(keys, ints));
+        }
+        StringBuilder result = new StringBuilder();
+        for (int[] arr : ciphertext_list) {
+            int num = 0;
+            for (int i = 0; i < 8; i++) {
+                num = num * 2 + arr[i];
+            }
+            result.append((char) num);
+        }
+        return result.toString();
+    }
+
     //解密过程是加密过程的逆运算
     public int [] decrypt(int [] key,int [] ciphertext){
         int [] ip = P_BOX_substitute(ciphertext,IP);
@@ -119,5 +164,42 @@ public class SDES_ {
         System.arraycopy(left_ip,0,res,4,4);
         res = P_BOX_substitute(res,IP_1);
         return res;
+    }
+
+    //当输入为字符串时，解密算法与加密算法的操作类似，还是先转化为列表再对列表进行操作
+    public String decrypt(String key,String ciphertext){
+        ArrayList<int []> ciphertext_list = new ArrayList<>();
+        for(int i = 0; i < ciphertext.length(); i++) {
+            int ciphertext_a = (int)ciphertext.charAt(i);
+            String binary = Integer.toBinaryString(ciphertext_a);
+            StringBuilder sb = new StringBuilder(binary);
+            while (sb.length() < 8) {
+                sb.insert(0, '0');
+            }
+            int [] plaintext_i =  new int[8];
+            for (int j = 0; j < 8; j++) {
+                plaintext_i[j] = sb.charAt(j) - '0';
+            }
+            ciphertext_list.add(plaintext_i);
+        }
+        char[] chars = key.toCharArray();
+        int length = chars.length;
+        int[] keys = new int[length];
+        for (int i = 0; i < length; i++) {
+            keys[i] = chars[i] - '0';
+        }
+        ArrayList<int []> plaintext_list = new ArrayList<>();
+        for (int[] ints : ciphertext_list) {
+            plaintext_list.add(decrypt(keys, ints));
+        }
+        StringBuilder result = new StringBuilder();
+        for (int[] arr : plaintext_list) {
+            int num = 0;
+            for (int i = 0; i < 8; i++) {
+                num = num * 2 + arr[i];
+            }
+            result.append((char) num);
+        }
+        return result.toString();
     }
 }

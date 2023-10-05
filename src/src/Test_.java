@@ -1,3 +1,5 @@
+package src;
+
 import java.util.Arrays;
 
 public class Test_ {
@@ -18,5 +20,12 @@ public class Test_ {
         System.out.println(Arrays.toString(ciphertext));
         int [] decrypted = sdes.decrypt(key,ciphertext);
         System.out.println(Arrays.toString(decrypted));
+
+        String plaintext_ = "yuanshen";
+        String key_ = "1111111111";
+        String ciphertext_ = sdes.encrypt(key_,plaintext_);
+        System.out.println(ciphertext_);
+        String decrypted_ = sdes.decrypt(key_,ciphertext_);
+        System.out.println(decrypted_);
     }
 }
