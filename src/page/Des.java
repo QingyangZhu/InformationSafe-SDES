@@ -13,7 +13,7 @@ public class Des extends JFrame implements ActionListener {
     JCheckBox encryptionToggle;
 
 
-    Des() {
+    public Des() {
         getContentPane().setBackground(Color.ORANGE);
         setLayout(null);
 

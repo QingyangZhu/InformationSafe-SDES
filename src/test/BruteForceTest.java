@@ -1,4 +1,6 @@
-package src;
+package test;
+
+import src.SDES_;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -89,6 +91,11 @@ public class BruteForceTest {
 
         plaintext_list.add(new int[]{1, 0, 0, 1, 1, 0, 1, 0});
         ciphertext_list.add(new int[]{1, 1, 1, 0, 1, 1, 1, 1});
+        for (int i = 1; i <= plaintext_list.size(); i++) {
+            System.out.println("第"+i+"组明文和密文：");
+            System.out.println(Arrays.toString(plaintext_list.get(i - 1)));
+            System.out.println(Arrays.toString(ciphertext_list.get(i - 1)));
+        }
 
         //调用暴力破解的方法，并记录时间
         ArrayList<Long> time_list = new ArrayList<>();

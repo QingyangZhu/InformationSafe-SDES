@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/InformationSafe-SDES.iml" filepath="$PROJECT_DIR$/InformationSafe-SDES.iml" />
+      <module fileurl="file://$PROJECT_DIR$/InformationSecurity-SDES.iml" filepath="$PROJECT_DIR$/InformationSecurity-SDES.iml" />
     </modules>
   </component>
 </project>

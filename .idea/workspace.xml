@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a515c88-afdf-4da0-8048-b44ccdcbd563" name="更改" comment="GUI页面&#10;修复了按照要求输入却按照字符型操作的bug">
-      <change afterPath="$PROJECT_DIR$/src/src/BruteForceTest.java" afterDir="false" />
+    <list default="true" id="5a515c88-afdf-4da0-8048-b44ccdcbd563" name="更改" comment="完成了暴力破解密钥（含多线程）以及寻找一组明密文对可能存在的多个密钥">
+      <change afterPath="$PROJECT_DIR$/ProjectScreenshots/abnormal3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/Test_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/src/Test_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/InformationSafe-SDES.iml" beforeDir="false" afterPath="$PROJECT_DIR$/InformationSecurity-SDES.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/Des.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/Des.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/BruteForceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/BruteForceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/Test_.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Test_.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,11 +60,11 @@
   </component>
   <component name="RunManager" selected="应用程序.BruteForceTest">
     <configuration name="BruteForceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.BruteForceTest" />
-      <module name="InformationSafe-SDES" />
+      <option name="MAIN_CLASS_NAME" value="test.BruteForceTest" />
+      <module name="InformationSecurity-SDES" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -68,7 +74,7 @@
     </configuration>
     <configuration name="Des" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="page.Des" />
-      <module name="InformationSafe-SDES" />
+      <module name="InformationSecurity-SDES" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="page.*" />
@@ -81,17 +87,17 @@
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="InformationSafe-SDES" />
+      <module name="InformationSecurity-SDES" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Test_" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.Test_" />
-      <module name="InformationSafe-SDES" />
+      <option name="MAIN_CLASS_NAME" value="test.Test_" />
+      <module name="InformationSecurity-SDES" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,12 +105,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="InformationSecurity-SDES" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="InformationSecurity-SDES" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="应用程序.BruteForceTest" />
+        <item itemvalue="应用程序.Main" />
         <item itemvalue="应用程序.Test_" />
         <item itemvalue="应用程序.Des" />
-        <item itemvalue="应用程序.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -120,7 +139,8 @@
       <workItem from="1695898445033" duration="806000" />
       <workItem from="1696430382022" duration="2152000" />
       <workItem from="1696432554869" duration="2689000" />
-      <workItem from="1696502023498" duration="14561000" />
+      <workItem from="1696502023498" duration="14909000" />
+      <workItem from="1696560304738" duration="9608000" />
     </task>
     <task id="LOCAL-00001" summary="补充了输入为字符串的情形&#10;完成了页面的制作">
       <created>1696506703906</created>
@@ -136,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696509020693</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="完成了暴力破解密钥（含多线程）以及寻找一组明密文对可能存在的多个密钥">
+      <created>1696522199869</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696522199869</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +173,7 @@
     <MESSAGE value="完成sdes算法部分,修正了shift方法，并与其他组进行实验测试，结果匹配" />
     <MESSAGE value="补充了输入为字符串的情形&#10;完成了页面的制作" />
     <MESSAGE value="GUI页面&#10;修复了按照要求输入却按照字符型操作的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI页面&#10;修复了按照要求输入却按照字符型操作的bug" />
+    <MESSAGE value="完成了暴力破解密钥（含多线程）以及寻找一组明密文对可能存在的多个密钥" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了暴力破解密钥（含多线程）以及寻找一组明密文对可能存在的多个密钥" />
   </component>
 </project>
